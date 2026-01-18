@@ -61,3 +61,4 @@ assets_version = "3.0.3" # do not edit: managed by `mdbook-admonish install`
 "/simulation/resim.html" = "/using/sim/resim.html"
 "/which-sim-particles.html" = "/using/sim/which-sim-particles.html"
 "/docker/index.html" = "/cpp_refman.html"
+"/using/batch.html" = "/using/batch/index.html"
