@@ -21,13 +21,12 @@ what is currently working in ldmx-sw.
 argument (the `detector.gdml` file for the geometry you wish to
 visualize) and an optional argument for a macro file, explained later.
 
-As a concrete example (beginning from the directory holding this
-`README`):
+As a concrete example (beginning from the base ldmx-sw directory):
 
 ```
-denv g4-vis ../ldmx-det-v15-8gev/detector.gdml
+denv g4-vis install/data/detectors/ldmx-det-v15-8gev/detector.gdml
 or
-just g4-vis ../ldmx-det-v15-8gev/detector.gdml
+just g4-vis install/data/detectors/ldmx-det-v15-8gev/detector.gdml
 ```
 
 The `detector.gdml` file is our gateway to all of the detector’s
@@ -270,15 +269,24 @@ number 40.
 
 So far this tutorial has covered using OGL in the CLI. It’s also
 possible to write a macro \- a set of commands - which can be executed
-sequentially. To execute all the commands in a macro file, simply use:
+sequentially. To execute all the commands in a macro file, simply use 
+(while at the `g4-vis` CLI):
 
 ```
 /control/execute /path/to/macrofile.mac
 ```
 
+It's also possible to execute the macro file immediately after loading
+the geometry, by giving `just` the path to the macro as a second
+argument:
+
+```
+just g4-vis /path/to/detector.gdml /path/to/macrofile.mac
+```
+
 A few example macro files have been included with this tutorial, to do
 things such as examining the TSPads in greater detail, rendering the
-ECal, and a secret third example which I’ll leave as a surprise.
+ECal, and a secret third example which I’ll add later as a surprise.
 
 <br>
 
